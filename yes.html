@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./yes_style.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            
+            <div class="gif_container">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHBrczBxdzM3Z2huaGV1M3g5dTZnZ3ljNWx1OWd4dWI3YmhqYnpneiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L95W4wv8nnb9K/giphy.webp" alt="Cute animated illustration">
+                <div class="letter-container">
+                    <h1>My Love,</h1>
+                    <p>
+                        I’ve been thinking about how to put into words the way I feel about you, but I always come up short because no words seem to fully capture how much I love you. Still, I want to try, because you deserve to know just how deeply I care for you.
+                    </p>
+                    <p>
+                        Every day with you feels like a gift, and every moment we share makes me love you even more. There’s a warmth in your smile that I can never get enough of, a comfort in your presence that makes everything feel right, and a beauty in your heart that inspires me to be the best version of myself.
+                    </p>
+                    <p>
+                        I love you more than words could ever explain. It’s in the way I miss you the moment we part, in the way my thoughts constantly drift to you, and in the way my heart feels full every time I see your name or hear your voice. You are my world, and I don’t just love you—I love you too much, in the most wonderful way.
+                    </p>
+                    <p>
+                        You are the reason my heart beats a little faster and my days shine a little brighter. I am so grateful to have you in my life, and I promise to never take that for granted. I love you with everything I am, and I will continue loving you more and more with each passing day. And I'm sorry for not being like the other guys.
+                        I'm sorry for overreacting at times I'm sorry for everything thats wrong in your life somewhere along the lines I dont know if I'm the real problem.  
+                    </p>
+                    <p>Forever yours,</p>
+                    <p>Aneesh</p>
+                </div>
+            </div>
+        </div>
+        <div>
+        <h1>From 21st june to up until now</h1>
+        <p>It has been <span id="daysCounter"></span> days, <span id="hoursCounter"></span> hours, and <span id="minutesCounter"></span> minutes since June 21st.</p>
+     </div>
+        <script>
+            function calculateTime() {
+                // Set the start date (June 21st)
+                const startDate = new Date('2024-06-21T00:00:00');
+                
+                // Get the current date and time
+                const currentDate = new Date();
+    
+                // Calculate the difference in time (milliseconds)
+                const timeDifference = currentDate - startDate;
+    
+                // Convert time difference to days
+                const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    
+                // Get the remainder after removing days
+                const remainingAfterDays = timeDifference % (1000 * 60 * 60 * 24);
+    
+                // Convert the remainder to hours
+                const hoursDifference = Math.floor(remainingAfterDays / (1000 * 60 * 60));
+    
+                // Get the remainder after removing hours
+                const remainingAfterHours = remainingAfterDays % (1000 * 60 * 60);
+    
+                // Convert the remainder to minutes
+                const minutesDifference = Math.floor(remainingAfterHours / (1000 * 60));
+    
+                // Display the result in the corresponding spans
+                document.getElementById('daysCounter').textContent = daysDifference;
+                document.getElementById('hoursCounter').textContent = hoursDifference;
+                document.getElementById('minutesCounter').textContent = minutesDifference;
+            }
+    
+            // Call the function when the page loads
+            window.onload = calculateTime;
+        </script>
+    </body> 
+    
+</html>
